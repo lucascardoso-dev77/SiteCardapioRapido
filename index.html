@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ===================== SEO BÁSICO ===================== -->
+<title>Cardápio Rápido — Cardápio Digital com QR Code para Restaurantes e Pizzarias</title>
+<meta name="description" content="Cardápio digital via QR Code para restaurantes, pizzarias e lanchonetes. Cliente pede pelo celular, pedido cai direto na cozinha. Sem aplicativo, sem instalação. Peça uma demonstração." />
+<meta name="keywords" content="cardápio digital, cardápio QR Code, sistema de pedidos para restaurante, cardápio online, cardápio para pizzaria, sistema para restaurante, cardápio sem aplicativo" />
+<meta name="author" content="Cardápio Rápido" />
+<link rel="canonical" href="https://www.cardapiorapido.com.br/" />
+<meta name="robots" content="index, follow" />
+
+<!-- ===================== OPEN GRAPH / REDES SOCIAIS ===================== -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:site_name" content="Cardápio Rápido" />
+<meta property="og:title" content="Cardápio Rápido — O cardápio do seu restaurante na palma da mão" />
+<meta property="og:description" content="Cardápio digital via QR Code. Sem aplicativo, sem instalação. Seu cliente pede, seu time recebe na hora." />
+<meta property="og:image" content="https://www.cardapiorapido.com.br/assets/og-image.jpg" />
+<meta property="og:url" content="https://www.cardapiorapido.com.br/" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Cardápio Rápido — Cardápio Digital com QR Code" />
+<meta name="twitter:description" content="O cardápio do seu restaurante na palma da mão. Sem aplicativo, sem instalação." />
+<meta name="twitter:image" content="https://www.cardapiorapido.com.br/assets/og-image.jpg" />
+
+<!-- ===================== DADOS ESTRUTURADOS (Google) ===================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Cardápio Rápido",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "Sistema de cardápio digital via QR Code para restaurantes, pizzarias e lanchonetes, com painel de pedidos em tempo real.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "BRL",
+    "availability": "https://schema.org/InStock"
+  },
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Restaurantes, pizzarias, lanchonetes, bares e hamburguerias"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O cliente precisa baixar algum aplicativo?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Não. O cliente escaneia o QR Code da mesa e o cardápio abre direto no navegador do celular, sem precisar instalar nada." }
+    },
+    {
+      "@type": "Question",
+      "name": "Funciona em restaurante, pizzaria e lanchonete?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sim. O Cardápio Rápido serve qualquer negócio com cardápio: restaurantes, pizzarias, hamburguerias, lanchonetes, bares e açaiterias." }
+    },
+    {
+      "@type": "Question",
+      "name": "Os pedidos caem direto na cozinha?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sim. Assim que o cliente confirma o pedido, ele aparece em tempo real no painel da cozinha e pode sair impresso automaticamente na comanda." }
+    },
+    {
+      "@type": "Question",
+      "name": "Dá pra mudar preços e fotos do cardápio a qualquer hora?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sim. Pelo painel administrativo você atualiza produtos, preços, fotos e disponibilidade em segundos, sem depender de ninguém." }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --cacau:#211209;
+    --cacau-2:#32200F;
+    --cacau-3:#3F2914;
+    --caramelo:#D9A05B;
+    --caramelo-claro:#F0C989;
+    --brasa:#C8562E;
+    --creme:#F7EDDC;
+    --creme-dim:#C9B79C;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cacau);
+    color:var(--creme);
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; display:block;}
+  .wrap{ max-width:1160px; margin:0 auto; padding:0 24px; }
+  h1,h2,h3{ font-family:'Baloo 2',sans-serif; font-weight:700; line-height:1.1; }
+  a{ color:inherit; }
+
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Baloo 2',sans-serif; font-weight:600; font-size:12.5px;
+    letter-spacing:1.5px; text-transform:uppercase; color:var(--caramelo-claro);
+    background:rgba(217,160,91,0.12); border:1px solid rgba(217,160,91,0.35);
+    padding:7px 16px; border-radius:999px;
+  }
+
+  /* NAV */
+  .nav{
+    position:sticky; top:0; z-index:40;
+    background:rgba(33,18,9,0.88); backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(217,160,91,0.15);
+  }
+  .nav-inner{ display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:1160px; margin:0 auto; }
+  .logo{ display:flex; align-items:center; gap:10px; font-family:'Baloo 2',sans-serif; font-weight:800; font-size:19px; }
+  .logo .cloche{ font-size:22px; }
+  .nav-links{ display:flex; gap:28px; font-size:14.5px; font-weight:500; }
+  .nav-links a:hover{ color:var(--caramelo-claro); }
+  .nav-cta{
+    background:var(--brasa); color:#fff; padding:10px 20px; border-radius:999px;
+    font-family:'Baloo 2',sans-serif; font-weight:600; font-size:14px; white-space:nowrap;
+    box-shadow:0 4px 14px rgba(200,86,46,0.35);
+  }
+  @media (max-width:820px){ .nav-links{ display:none; } }
+
+  /* HERO */
+  .hero{ position:relative; padding:64px 0 40px; overflow:hidden; }
+  .hero::before{
+    content:''; position:absolute; top:-160px; right:-160px; width:520px; height:520px;
+    background:radial-gradient(circle, rgba(217,160,91,0.18), transparent 70%);
+    pointer-events:none;
+  }
+  .hero-grid{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:48px; align-items:center; position:relative; }
+  @media (max-width:900px){ .hero-grid{ grid-template-columns:1fr; } }
+
+  .hero h1{ font-size:48px; margin:18px 0 18px; }
+  .hero h1 .destaque{ color:var(--caramelo); }
+  .hero p.lead{ font-size:17px; color:var(--creme-dim); max-width:480px; line-height:1.6; margin-bottom:26px; }
+
+  .hero-bullets{ display:flex; flex-direction:column; gap:10px; margin-bottom:30px; }
+  .hero-bullets li{ list-style:none; display:flex; align-items:center; gap:10px; font-size:14.5px; color:var(--creme); }
+  .hero-bullets .check{
+    width:20px; height:20px; border-radius:50%; background:rgba(110,180,120,0.18); color:#8FD19E;
+    display:flex; align-items:center; justify-content:center; font-size:12px; flex:0 0 auto;
+  }
+
+  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Baloo 2',sans-serif; font-weight:600; font-size:15px;
+    padding:14px 26px; border-radius:12px; cursor:pointer; border:none; text-decoration:none;
+  }
+  .btn-primary{ background:var(--brasa); color:#fff; box-shadow:0 8px 22px rgba(200,86,46,0.35); }
+  .btn-primary:hover{ background:#B44724; }
+  .btn-secondary{ background:transparent; color:var(--creme); border:1.5px solid rgba(247,237,220,0.3); }
+  .btn-secondary:hover{ border-color:var(--caramelo); color:var(--caramelo-claro); }
+
+  .hero-img-wrap{ position:relative; }
+  .hero-img-wrap img{
+    border-radius:26px;
+    box-shadow:0 30px 60px rgba(0,0,0,0.5);
+  }
+
+  /* TABLE TENT — elemento de assinatura, baseado no display de mesa real do produto */
+  .tent{
+    background:var(--cacau-2);
+    border:1px solid rgba(217,160,91,0.25);
+    border-radius:14px;
+    padding:22px 20px;
+    position:relative;
+  }
+  .tent::before{
+    content:''; position:absolute; left:28px; bottom:-9px;
+    width:0; height:0;
+    border-left:11px solid transparent; border-right:11px solid transparent;
+    border-top:11px solid var(--cacau-2);
+  }
+  .tent .tent-icon{ font-size:26px; margin-bottom:12px; display:block; }
+  .tent h3{ font-size:17px; margin-bottom:8px; color:var(--creme); }
+  .tent p{ font-size:13.5px; color:var(--creme-dim); line-height:1.55; }
+
+  /* SEÇÕES */
+  section{ padding:78px 0; }
+  .section-head{ text-align:center; max-width:620px; margin:0 auto 46px; }
+  .section-head h2{ font-size:34px; margin:14px 0 12px; }
+  .section-head p{ color:var(--creme-dim); font-size:15.5px; line-height:1.6; }
+
+  /* FEATURES (usa o formato "tent") */
+  .features-grid{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:20px;
+  }
+  @media (max-width:900px){ .features-grid{ grid-template-columns:repeat(2, 1fr); } }
+  @media (max-width:560px){ .features-grid{ grid-template-columns:1fr; } }
+  .features-grid .tent:nth-child(odd){ transform:rotate(-1.1deg); }
+  .features-grid .tent:nth-child(even){ transform:rotate(1.1deg); margin-top:14px; }
+
+  /* COMO FUNCIONA */
+  .como-funciona{ background:var(--cacau-2); border-top:1px solid rgba(217,160,91,0.12); border-bottom:1px solid rgba(217,160,91,0.12); }
+  .passos{ display:grid; grid-template-columns:repeat(3, 1fr); gap:28px; }
+  @media (max-width:820px){ .passos{ grid-template-columns:1fr; } }
+  .passo{ position:relative; padding-left:2px; }
+  .passo .num{
+    font-family:'Baloo 2',sans-serif; font-weight:800; font-size:15px;
+    color:var(--cacau); background:var(--caramelo);
+    width:34px; height:34px; border-radius:10px;
+    display:flex; align-items:center; justify-content:center; margin-bottom:16px;
+  }
+  .passo h3{ font-size:19px; margin-bottom:8px; }
+  .passo p{ color:var(--creme-dim); font-size:14.5px; line-height:1.6; }
+
+  /* PRA QUEM É */
+  .publico-chips{ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+  .publico-chips span{
+    font-family:'Baloo 2',sans-serif; font-weight:600; font-size:14.5px;
+    padding:11px 22px; border-radius:999px;
+    background:var(--cacau-2); border:1px solid rgba(217,160,91,0.25); color:var(--creme);
+  }
+
+  /* FAQ */
+  .faq-item{ border-bottom:1px solid rgba(217,160,91,0.18); padding:20px 0; }
+  .faq-item summary{
+    cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;
+    font-family:'Baloo 2',sans-serif; font-weight:600; font-size:16.5px;
+  }
+  .faq-item summary::-webkit-details-marker{ display:none; }
+  .faq-item summary::after{ content:'+'; font-size:22px; color:var(--caramelo); }
+  .faq-item[open] summary::after{ content:'–'; }
+  .faq-item p{ color:var(--creme-dim); font-size:14.5px; line-height:1.6; margin-top:12px; max-width:640px; }
+
+  /* CTA FINAL */
+  .cta-final{
+    background:linear-gradient(135deg, var(--brasa), #A8451F);
+    border-radius:28px; padding:56px 40px; text-align:center;
+    max-width:1112px; margin:0 auto;
+  }
+  .cta-final h2{ font-size:32px; color:#fff; margin-bottom:14px; }
+  .cta-final p{ color:rgba(255,255,255,0.85); font-size:15.5px; margin-bottom:28px; }
+  .cta-final .btn-primary{ background:#fff; color:var(--brasa); box-shadow:0 8px 22px rgba(0,0,0,0.25); }
+  .cta-final .btn-primary:hover{ background:var(--creme); }
+
+  /* FOOTER */
+  footer{ padding:40px 0 30px; border-top:1px solid rgba(217,160,91,0.12); }
+  .footer-inner{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+  .footer-inner .logo{ font-size:16px; }
+  footer .foot-links{ display:flex; gap:20px; font-size:13.5px; color:var(--creme-dim); }
+  footer .copy{ font-size:12.5px; color:var(--creme-dim); margin-top:18px; text-align:center; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="logo"><span class="cloche">🍽️</span> Cardápio Rápido</div>
+    <div class="nav-links">
+      <a href="#recursos">Recursos</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#para-quem">Para quem é</a>
+      <a href="#faq">Dúvidas</a>
+    </div>
+    <a class="nav-cta" href="https://wa.me/5500000000000?text=Quero%20conhecer%20o%20Card%C3%A1pio%20R%C3%A1pido" target="_blank" rel="noopener">Falar no WhatsApp</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">🔥 Para restaurantes e pizzarias</span>
+      <h1>O cardápio do seu restaurante, direto no <span class="destaque">celular do cliente</span></h1>
+      <p class="lead">Seu cliente escaneia o QR Code da mesa, escolhe os pratos e envia o pedido — que cai na hora na cozinha. Sem aplicativo, sem baixar nada, sem complicação.</p>
+
+      <ul class="hero-bullets">
+        <li><span class="check">✓</span> Cardápio sempre atualizado, com fotos e preços</li>
+        <li><span class="check">✓</span> Pedido cai direto na cozinha, em tempo real</li>
+        <li><span class="check">✓</span> Você gerencia tudo sozinho, sem depender de técnico</li>
+      </ul>
+
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://wa.me/5500000000000?text=Quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20Card%C3%A1pio%20R%C3%A1pido" target="_blank" rel="noopener">Quero uma demonstração</a>
+        <a class="btn btn-secondary" href="#como-funciona">Ver como funciona</a>
+      </div>
+    </div>
+
+    <div class="hero-img-wrap">
+      <img src="assets/hero-cardapio-rapido.jpg" alt="Garçom sorridente segurando um celular com o Cardápio Rápido aberto, mostrando itens do cardápio digital com fotos e preços, ao lado de um suporte de mesa com QR Code" width="602" height="764" fetchpriority="high"/>
+    </div>
+  </div>
+</header>
+
+<section id="recursos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">O que você ganha</span>
+      <h2>Tudo que um cardápio físico não consegue fazer</h2>
+      <p>Pensado pro dia a dia corrido de restaurante, pizzaria e lanchonete — sem curva de aprendizado.</p>
+    </div>
+    <div class="features-grid">
+      <div class="tent">
+        <span class="tent-icon">📱</span>
+        <h3>Cardápio digital</h3>
+        <p>Moderno, rápido e fácil de acessar — abre direto no navegador, sem instalar nada.</p>
+      </div>
+      <div class="tent">
+        <span class="tent-icon">🔳</span>
+        <h3>Acesso via QR Code</h3>
+        <p>Seu cliente escaneia na mesa e já vê o cardápio completo, sem precisar de aplicativo.</p>
+      </div>
+      <div class="tent">
+        <span class="tent-icon">📈</span>
+        <h3>Mais vendas</h3>
+        <p>Destaque seus produtos com fotos e descrições que dão vontade de pedir mais.</p>
+      </div>
+      <div class="tent">
+        <span class="tent-icon">⚙️</span>
+        <h3>Fácil de gerenciar</h3>
+        <p>Atualize itens, preços e fotos em segundos, direto do seu celular ou computador.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como-funciona" class="como-funciona">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Do QR Code ao prato</span>
+      <h2>Como funciona na prática</h2>
+      <p>Três passos entre o cliente sentar na mesa e o pedido chegar na cozinha.</p>
+    </div>
+    <div class="passos">
+      <div class="passo">
+        <div class="num">1</div>
+        <h3>Cliente escaneia o QR Code</h3>
+        <p>Cada mesa tem seu próprio código. Ao escanear, o cardápio abre na hora, com fotos e preços atualizados.</p>
+      </div>
+      <div class="passo">
+        <div class="num">2</div>
+        <h3>Monta o pedido pelo celular</h3>
+        <p>Escolhe os itens, adicionais e observações — igual um app de delivery, mas sem precisar instalar nada.</p>
+      </div>
+      <div class="passo">
+        <div class="num">3</div>
+        <h3>Pedido cai na cozinha</h3>
+        <p>Aparece na hora no painel da cozinha e pode sair impresso automaticamente na comanda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="para-quem">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Feito pro seu negócio</span>
+      <h2>Para quem é o Cardápio Rápido</h2>
+    </div>
+    <div class="publico-chips">
+      <span>Restaurantes</span>
+      <span>Pizzarias</span>
+      <span>Hamburguerias</span>
+      <span>Lanchonetes</span>
+      <span>Bares</span>
+      <span>Açaiterias</span>
+      <span>Cafeterias</span>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:760px;">
+    <div class="section-head">
+      <span class="eyebrow">Dúvidas comuns</span>
+      <h2>Perguntas frequentes</h2>
+    </div>
+
+    <details class="faq-item" open>
+      <summary>O cliente precisa baixar algum aplicativo?</summary>
+      <p>Não. O cliente escaneia o QR Code da mesa e o cardápio abre direto no navegador do celular, sem precisar instalar nada.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Funciona em restaurante, pizzaria e lanchonete?</summary>
+      <p>Sim. O Cardápio Rápido serve qualquer negócio com cardápio: restaurantes, pizzarias, hamburguerias, lanchonetes, bares e açaiterias.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Os pedidos caem direto na cozinha?</summary>
+      <p>Sim. Assim que o cliente confirma o pedido, ele aparece em tempo real no painel da cozinha e pode sair impresso automaticamente na comanda.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Dá pra mudar preços e fotos do cardápio a qualquer hora?</summary>
+      <p>Sim. Pelo painel administrativo você atualiza produtos, preços, fotos e disponibilidade em segundos, sem depender de ninguém.</p>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-final">
+      <h2>Rápido pra você, inesquecível pros seus clientes</h2>
+      <p>Fale com a gente e veja o Cardápio Rápido funcionando no seu cardápio, em poucos minutos.</p>
+      <a class="btn btn-primary" href="https://wa.me/5500000000000?text=Quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20Card%C3%A1pio%20R%C3%A1pido" target="_blank" rel="noopener">Falar no WhatsApp agora</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="logo"><span class="cloche">🍽️</span> Cardápio Rápido</div>
+      <div class="foot-links">
+        <a href="#recursos">Recursos</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#faq">Dúvidas</a>
+      </div>
+    </div>
+    <div class="copy">© <span id="ano"></span> Cardápio Rápido — sem instalação, 100% online, seguro e confiável.</div>
+  </div>
+</footer>
+
+<script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
+</body>
+</html>
